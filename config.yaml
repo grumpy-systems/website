@@ -1,17 +1,33 @@
 baseURL: "https://grumpy.systems/"
 languageCode: "en-us"
 title: "Grumpy"
-theme: "hugo-book"
+theme: "anatole"
+
+permalinks:
+  posts: /:year/:title/
 
 taxonomies:
     category: categories
     tag: tags
     series: series
 
-outputs:
-    home:
-        - HTML
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 5
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
 
 params:
-  BookSection: '/'
-  BookSearch: false
+  title: "I'm Grumpy"
+  author: "Grumpy"
+  description: "I make content about computers."
+  profilePicture: "https://placekitten.com/300/300"
+  copyright: "{{ YEAR }} Grumpy"
+  displayMode: "dark"
+  contentRatio: 0.7
+  doNotLoadAnimations: true

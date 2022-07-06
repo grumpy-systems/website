@@ -2,8 +2,6 @@
 title: "About"
 ---
 
-# About
-
 I make content about Linux, Homelabs, software development and more.  I use this
 site as the official repository for content I post.
 
