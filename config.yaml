@@ -35,5 +35,5 @@ params:
   displayMode: "dark"
   contentRatio: 0.8
   doNotLoadAnimations: true
-  mainSections: []
   readMore: true
+  mainSections: ["post"]
