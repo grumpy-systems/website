@@ -2,9 +2,6 @@
 title: "Autowired Traits in Symfony"
 date: 2017-10-07
 tags: ["how-to", "tools", "code"]
-aliases: [
-    "/2017/10/autowired-traits-in-symfony/",
-]
 ---
 
 This is something that I think is pretty slick in Symfony.  With 3.3, Symfony

@@ -2,9 +2,6 @@
 title: "Ubiquiti Edgerouter Openvpn Client Config"
 date: 2017-07-23
 tags: ["how-to"]
-aliases: [
-    "/2017/07/ubiquiti-edgerouter-openvpn-client-config/",
-]
 ---
 
 One thing that’s really handy for your Ubiquiti EdgeRouter is to have it act as a VPN client.  This gives all hosts on your network the ability to access the remote VPN without having to login.  Setting it up with pfSense is straightforward and pretty easy with the right tools.

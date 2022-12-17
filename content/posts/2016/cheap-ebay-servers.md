@@ -2,9 +2,6 @@
 title: "Cheap Ebay Servers"
 date: 2016-10-05
 tags: ["dev-ops", "startups"]
-aliases: [
-    "/2016/10/cheap-ebay-servers/",
-]
 ---
 
 One of the most challenging things about starting a business is figuring out how to setup your operations.  With a tech

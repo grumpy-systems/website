@@ -2,9 +2,6 @@
 title: "Doctrine Entity Testing"
 date: 2016-09-22
 tags: ["tools","code"]
-aliases: [
-    "/2016/09/doctrine-entity-testing/",
-]
 ---
 
 One of the things I’m working towards with Storehouse is 100% code coverage.

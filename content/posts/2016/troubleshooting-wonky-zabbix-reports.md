@@ -2,9 +2,6 @@
 title: "Troubleshooting Wonky Zabbix Reports"
 date: 2016-08-11
 tags: ["linux", "lessons-learned"]
-aliases: [
-    "/2016/08/troubleshooting-wonky-zabbix-reports/",
-]
 ---
 
 I rely on Zabbix to keep tabs on all of my machines and to make sure all of The

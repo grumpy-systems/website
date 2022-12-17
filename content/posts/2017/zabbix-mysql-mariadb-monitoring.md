@@ -2,9 +2,6 @@
 title: "Zabbix MySQL (MariaDB) Monitoring"
 date: 2017-01-31
 tags: ["dev-ops", "how-to", "linux"]
-aliases: [
-    "/2017/01/zabbix-mysql-mariadb-monitoring/",
-]
 ---
 
 This is another one of those things that is pretty straightforward, but requires

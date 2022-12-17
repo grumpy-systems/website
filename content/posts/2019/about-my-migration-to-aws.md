@@ -2,9 +2,6 @@
 title: "About My Migration to AWS"
 date: 2019-01-19
 tags: ["dev-ops", "lessons-learned", "startups"]
-aliases: [
-    "/2019/01/about-my-migration-to-aws/",
-]
 ---
 
 After a long a deep think, I've decided to retire my physical hardware and

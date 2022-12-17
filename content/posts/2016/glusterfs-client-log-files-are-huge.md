@@ -2,9 +2,6 @@
 title: "GlusterFS Client Log Files Are Huge"
 date: 2016-08-11
 tags: ["linux"]
-aliases: [
-    "/2016/08/glusterfs-client-log-files-are-huge/",
-]
 ---
 
 This is an issue I recently fixed on our GlusterFS installation, but I didn’t

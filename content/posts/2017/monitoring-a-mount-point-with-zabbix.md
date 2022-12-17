@@ -2,9 +2,6 @@
 title: "Monitoring a Mount Point With Zabbix"
 date: 2017-03-29
 tags: ["dev-ops", "linux"]
-aliases: [
-    "/2017/03/monitoring-a-mount-point-with-zabbix/",
-]
 ---
 
 A subtle issue I ran into was the issue that Proxmox VE would sometimes unmount

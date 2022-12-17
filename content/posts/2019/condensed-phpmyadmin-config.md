@@ -2,9 +2,6 @@
 title: "Condensed PHPMyAdmin Configuration"
 date: "2019-12-02"
 tags: ["dev-ops", "how-to", "code"]
-aliases: [
-    "/2019/12/condensed-phpmyadmin-configuration/"
-]
 ---
 
 This is something that bothered me when adding more than one server to
