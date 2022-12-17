@@ -1,0 +1,35 @@
+---
+kind: pipeline
+name: build
+type: docker
+
+steps:
+- name: submodules
+  image: alpine/git
+  commands:
+  - git submodule init
+  - git submodule update --recursive
+
+- name: hugo
+  image: plugins/hugo
+
+  settings:
+    hugo_version: 0.68.3
+    validate: true
+    extended: true
+    url: https://grumpy.systems
+
+- name: deploy
+  image: appleboy/drone-scp
+  settings:
+    host: 10.10.0.25
+    username: grumpy.systems
+    key:
+      from_secret: hosted_ssh_key
+    port: 22
+    target: /home/grumpy.systems/public_html
+    source: public/*
+    strip_components: 1
+  when:
+    branch:
+      - master
