@@ -37,3 +37,6 @@ params:
   doNotLoadAnimations: true
   readMore: true
   mainSections: ["post"]
+  oldContentWarning: true
+  oldContentDuration: 1095 # 3 years
+  disableThemeSwitcher: true
