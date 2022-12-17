@@ -14,8 +14,7 @@ don't panic)
 {{< social-tag name="TikTok" icon="icon-tiktok" link="https://www.tiktok.com/@grumpy.systems" >}}
 {{< social-tag icon="icon-github" link="https://github.com/grumpy-systems" name="GitHub" >}}
 {{< social-tag icon="icon-youtube" link="https://www.youtube.com/channel/UCnQkxe-l11qWYkwyg_svUCw" name="YouTube" >}}
-
-(I'm working to migrate data to my new GitHub account, so some things may be broken for now)
+{{< social-tag icon="icon-reddit" link="https://reddit.com/u/grumpy-systems" name="Reddit" >}}
 
 ***
 
