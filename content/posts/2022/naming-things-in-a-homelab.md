@@ -42,14 +42,15 @@ memorable and unique domain is step one.  For my setup I went with
 
 For public DNS, I have two "types" of first-level names I use.  The first is a
 site name, such as `home.last-name.cloud` or `provider.last-name.cloud`. These
-point to the public IP of the site the correspond to, and can be updated via
+point to the public IP of the site they correspond to, and can be updated via
 dynamic DNS (in the case of homes) or are just static in the case of public
 providers.
 
 The other type of first-level DNS names are global services, and are just
 `app.last-name.cloud`.  These keep things simple and memorable for anyone who is
-offsite.  Behind the scenes, these just point to the site's DNS record.  When a
-site moves, such as dynamic DNS updating, the services move as well.
+offsite.  Behind the scenes, these just point to the site's DNS record where
+they are hosted.  When a site moves, such as dynamic DNS updating, the services
+move as well.
 
 Within each site, private DNS is used extensively.  I assign each network in the
 site a DNS subdomain, such as `lan.home.last-name.cloud` or
