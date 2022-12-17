@@ -33,3 +33,12 @@ reach out.
 ## Contacting Me
 
 The best way is to use one of the social media links on my homepage.
+
+## Code, Etc.
+
+All the content on this site is licensed under
+[Attribution-NonCommercial-ShareAlike
+4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Some code samples may have different licenses attached to them.  If no other
+license is specified, the above license applies.
