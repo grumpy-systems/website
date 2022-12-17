@@ -2,6 +2,7 @@
 title: "How My Homelab Became Critical Infrastructure During a Tornado"
 date: 2022-04-30
 tags: ["homelab", "personal"]
+type: post
 ---
 
 I recently made a design change to my homelab that paid off in leaps and bounds,

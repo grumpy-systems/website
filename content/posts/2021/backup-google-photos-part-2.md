@@ -2,6 +2,7 @@
 title: "Backup Google Photos (Part 2)"
 date: 2021-04-15
 tags: ["how-to", "code", "homelab"]
+type: post
 ---
 
 In [Part One](/2021/backup-google-photos-part-1/) we looked at how to download

@@ -2,6 +2,7 @@
 title: "Outages Feb 16-18 2017"
 date: 2017-03-01
 tags: ["dev-ops", "lessons-learned"]
+type: post
 ---
 
 So I’m a human, and I have outages.  My goal is to be more transparent, not only

@@ -2,6 +2,7 @@
 title: "Using Foundation for Emails (Inky) in a Php Application"
 date: 2019-09-13
 tags: ["how-to", "tools", "code"]
+type: post
 ---
 
 One framework that I instantly fell in love with was Inky.  Having built a

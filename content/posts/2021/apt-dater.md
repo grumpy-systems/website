@@ -2,6 +2,7 @@
 title: "Keeping things updated with Apt-Dater"
 date: 2021-12-30
 tags: ["linux", "how-to", "dev-ops"]
+type: post
 ---
 
 One challenge of running servers, especially if you have more than a few, is

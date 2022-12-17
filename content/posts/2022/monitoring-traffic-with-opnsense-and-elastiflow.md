@@ -2,6 +2,7 @@
 title: "Monitoring Traffic With OPNsense and Elastiflow"
 date: 2022-06-26
 tags: ["homelab","linux","how-to","tools"]
+type: post
 ---
 
 One critical thing for any environment, in my opinion, is monitoring.  Being

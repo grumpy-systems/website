@@ -2,6 +2,7 @@
 title: "MySQL (MariaDB) Galera Cluster Restart"
 date: 2017-02-05
 tags: ["dev-ops", "how-to", "linux"]
+type: post
 ---
 
 This is a scary problem when you're recovering from an outage of your database

@@ -2,6 +2,7 @@
 title: "Firewalld in Debian 10"
 date: 2021-08-24
 tags: ["how-to", "linux"]
+type: post
 ---
 
 In the past, I showed how to add a [firewall rule in Debian

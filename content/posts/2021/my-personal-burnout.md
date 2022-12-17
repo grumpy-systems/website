@@ -2,6 +2,7 @@
 title: "My Personal Burnout"
 date: 2021-03-17
 tags: ["random", "personal"]
+type: post
 ---
 
 I suffered a pretty hard burn out a couple of years ago.  I ended up changing

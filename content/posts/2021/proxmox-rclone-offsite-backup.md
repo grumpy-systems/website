@@ -2,6 +2,7 @@
 title: "Promxox/Rclone Offsite Backup"
 date: 2021-09-27
 tags: ["how-to", "linux", "dev-ops"]
+type: post
 ---
 
 One of the most important parts of keeping data safe is offsite backups.  One

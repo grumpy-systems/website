@@ -2,6 +2,7 @@
 title: "A New Site"
 date: 2021-03-13T17:46:02-06:00
 tags: ["random", "meta"]
+type: post
 ---
 
 I'm not a huge fan of meta posts, but this seemed like a fairly major change so

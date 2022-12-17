@@ -2,6 +2,7 @@
 title: "My Personal Backup Strategy"
 date: 2021-10-07
 tags: ["how-to", "linux", "dev-ops"]
+type: post
 ---
 
 I'm pretty protective of my data.  I like to make sure all my important file are

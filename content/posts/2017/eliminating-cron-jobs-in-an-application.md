@@ -2,6 +2,7 @@
 title: "Eliminating Cron Jobs in an Application"
 date: 2017-08-28
 tags: ["lessons-learned", "tools"]
+type: post
 ---
 
 When you have an application, there’s inevitably some things that just need to

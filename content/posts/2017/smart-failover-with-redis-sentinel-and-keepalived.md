@@ -2,6 +2,7 @@
 title: "Smart Failover With Redis Sentinel and Keepalived"
 date: 2017-12-18
 tags: ["dev-ops", "how-to", "linux"]
+type: post
 ---
 
 Through some Google-fu and some other great tutorials, I’ve successfully setup a

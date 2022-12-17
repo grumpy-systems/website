@@ -2,6 +2,7 @@
 title: "Resizing Lvm Partitions on Centos"
 date: 2016-10-26
 tags: ["dev-ops", "how-to", "linux"]
+type: post
 ---
 
 One of the things I’ve done for my employer is resize partitions on a few CentOS

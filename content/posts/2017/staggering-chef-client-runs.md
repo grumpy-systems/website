@@ -2,6 +2,7 @@
 title: "Staggering Chef Client Runs"
 date: 2017-07-20
 tags: ["dev-ops", "how-to", "linux", "tools"]
+type: post
 ---
 
 One of the new tools I've discovered is Chef to manage the configuration and

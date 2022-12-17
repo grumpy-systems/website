@@ -2,6 +2,7 @@
 title: "Puppet Without a Puppet Server"
 date: 2021-08-04T21:28:15-05:00
 tags: ["how-to", "linux", "dev-ops", "code"]
+type: post
 ---
 
 One tool that is pretty neat for anyone who manages more than one machine is

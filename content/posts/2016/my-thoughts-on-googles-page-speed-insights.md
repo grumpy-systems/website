@@ -2,6 +2,7 @@
 title: "My Thoughts on Googles Page Speed Insights"
 date: 2016-12-16
 tags: ["dev-ops", "startups", "tools"]
+type: post
 ---
 
 Google’s Page Speed measure is a tool to give developers feedback as to how

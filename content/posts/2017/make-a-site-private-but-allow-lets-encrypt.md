@@ -2,6 +2,7 @@
 title: "Make a Site Private but Allow Lets Encrypt"
 date: 2017-05-22
 tags: ["dev-ops", "how-to", "linux"]
+type: post
 ---
 
 This is a pretty straightforward thing I've wanted to do for some time.

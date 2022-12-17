@@ -2,6 +2,7 @@
 title: "Outage September 15 2017"
 date: 2017-09-15
 tags: ["dev-ops", "lessons-learned"]
+type: post
 ---
 
 Today, The Storehouse experienced an outage that lasted approximately 12 hours.

@@ -2,6 +2,7 @@
 title: "Sort Evolution Mail Filters with Python"
 date: 2022-01-15
 tags: ["code", "random", "tools"]
+type: post
 ---
 
 I _really_ like filtering my mail.  I tend to only need to act on a very small

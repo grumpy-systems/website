@@ -2,6 +2,7 @@
 title: "TryHackMe: Vulnversity"
 date: 2021-07-06T21:05:08-05:00
 tags: ["security"]
+type: post
 ---
 
 _Meta Information: This is a room I recently completed on TryHackMe.  I figured

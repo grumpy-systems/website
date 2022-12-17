@@ -2,6 +2,7 @@
 title: "ua-parser-js Compromise"
 date: 2021-10-24
 tags: ["security"]
+type: post
 ---
 
 _Obvious Disclaimer: I'm not a professional security researcher.  I dabble in

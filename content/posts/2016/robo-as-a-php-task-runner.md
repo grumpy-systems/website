@@ -2,6 +2,7 @@
 title: "Robo as a PHP Task Runner"
 date: 2016-07-14
 tags: ["tools"]
+type: post
 ---
 
 One of the things I ran into when developing The Storehouse was the need for a

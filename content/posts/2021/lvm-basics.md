@@ -2,6 +2,7 @@
 title: "LVM Basics"
 date: 2021-10-17
 tags: ["how-to", "linux", "dev-ops"]
+type: post
 ---
 
 This is a quick how-to showing my procedure for setting up new drives with LVM.

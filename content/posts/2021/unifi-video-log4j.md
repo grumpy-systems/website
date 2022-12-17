@@ -2,6 +2,7 @@
 title: "Addressing the log4j Vulnerability in Unifi Video 3.10.13"
 date: 2021-12-11T00:03:41-06:00
 tags: ["linux", "security", "how-to", "homelab"]
+type: post
 ---
 
 If you've been on the Internet at all today, you've probably heard that there is

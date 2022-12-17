@@ -2,6 +2,7 @@
 title: "Securing Apache Sites With Saml"
 date: "2019-10-25"
 tags: ["tools", "how-to", "code"]
+type: post
 ---
 
 So I recently have fallen in love with single sign on.  I really like

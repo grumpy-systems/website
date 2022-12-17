@@ -2,6 +2,7 @@
 title: "Fix Virtualmin Proxy with Let's Encrypt"
 date: 2021-06-14
 tags: ["how-to", "linux", "dev-ops"]
+type: post
 ---
 
 This is a minor inconvenience that I've dealt with for far too long.  When using

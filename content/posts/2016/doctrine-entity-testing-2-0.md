@@ -2,6 +2,7 @@
 title: "Doctrine Entity Testing 2.0"
 date: 2016-10-21
 tags: ["tools","code"]
+type: post
 ---
 
 About a month ago, I shared a method for testing doctrine entities.  This came

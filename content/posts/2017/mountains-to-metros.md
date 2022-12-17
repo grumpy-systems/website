@@ -2,6 +2,7 @@
 title: "Mountains to Metros"
 date: 2017-01-15
 tags: ["random"]
+type: post
 ---
 
 A scenario for Locomotion, that old train game from the same guy who made Roller

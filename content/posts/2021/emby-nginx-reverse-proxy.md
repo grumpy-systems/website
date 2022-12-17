@@ -2,6 +2,7 @@
 title: "Emby + Nginx Reverse Proxy"
 date: 2021-11-24
 tags: ["homelab","how-to","linux"]
+type: post
 ---
 
 After some light Google-ing, I couldn't find a simple example for Emby running

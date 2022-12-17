@@ -2,6 +2,7 @@
 title: "Backup Google Photos (Part 1)"
 date: 2021-04-01
 tags: ["how-to", "homelab"]
+type: post
 ---
 
 One service that I've come to rely on is Google Photos.  For the last number of

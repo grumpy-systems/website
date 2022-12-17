@@ -2,6 +2,7 @@
 title: "GNUCash Template for Harland Clarke Laser 417 Checks"
 date: 2018-07-31
 tags: ["random"]
+type: post
 ---
 
 So this is kinda random, but I needed a template to make these checks work with

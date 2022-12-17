@@ -2,6 +2,7 @@
 title: "Doctrine Entity Testing"
 date: 2016-09-22
 tags: ["tools","code"]
+type: post
 ---
 
 One of the things I’m working towards with Storehouse is 100% code coverage.

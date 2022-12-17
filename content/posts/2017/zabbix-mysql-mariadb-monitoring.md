@@ -2,6 +2,7 @@
 title: "Zabbix MySQL (MariaDB) Monitoring"
 date: 2017-01-31
 tags: ["dev-ops", "how-to", "linux"]
+type: post
 ---
 
 This is another one of those things that is pretty straightforward, but requires

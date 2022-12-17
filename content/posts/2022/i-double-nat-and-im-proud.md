@@ -2,6 +2,7 @@
 title: "I Double NAT My Network, And I'm Proud"
 date: 2022-06-08
 tags: ["homelab", "how-to"]
+type: post
 ---
 
 I double NAT my home network.  And the funny part is I _designed_ it that way.

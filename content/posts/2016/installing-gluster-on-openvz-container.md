@@ -2,6 +2,7 @@
 title: "Installing Gluster on OpenVZ Container"
 date: 2016-12-03
 tags: ["dev-ops", "linux"]
+type: post
 ---
 
 Setting up OpenVZ containers to be able to use a FUSE filesystem is pretty

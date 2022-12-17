@@ -2,6 +2,7 @@
 title: "Load Balancing With pfSense"
 date: 2016-09-01
 tags: ["dev-ops"]
+type: post
 ---
 
 I’ve been using pfSense in production for a number of years.  What started out

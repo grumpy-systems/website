@@ -2,6 +2,7 @@
 title: "Custom Debian ISO"
 date: 2021-09-07
 tags: ["how-to", "linux", "dev-ops", "code"]
+type: post
 ---
 
 If you're installing Debian on a regular basis, or want to automate the

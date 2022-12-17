@@ -2,6 +2,7 @@
 title: "Building a Custom OpenVZ Template"
 date: 2016-07-27
 tags: ["linux", "tools"]
+type: post
 ---
 
 One of the things I’ve thought would be handy for much too long was setting up a

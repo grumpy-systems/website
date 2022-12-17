@@ -2,6 +2,7 @@
 title: "Proxmox 3 to 4 Upgrade Network Issue"
 date: 2017-01-23
 tags: ["dev-ops", "linux"]
+type: post
 ---
 
 This is a problem that showed itself when upgrading our Proxmox 3.2 Nodes up to

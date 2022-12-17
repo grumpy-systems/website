@@ -2,6 +2,7 @@
 title: "Adding a Firewall Rule to Debian 9"
 date: 2017-10-17
 tags: ["dev-ops", "linux"]
+type: post
 ---
 
 Not too long ago in the Linux world, firewall rules were complex.  iptables did
