@@ -15,10 +15,10 @@ around and waiting is one of the worst feelings.  After an outage that lasted
 over a day, I took matters into my own hands and created a backup 4G connection
 for my home internet.
 
-_Disclaimer: This setup is complex and this guide may miss things or omit them.
-While I tried to handle every detail, please know that something may be missing.
-If you run into trouble, find me on a social media platform on my homepage and I
-might be able to help or update this guide._
+_Disclaimer: This setup is complex and this guide may miss things or omit some
+details. While I tried to handle everything I did, please know that something
+may be missing. If you run into trouble, find me on a social media platform on
+my homepage and I might be able to help or update this guide._
 
 ## Motivation
 
