@@ -8,9 +8,9 @@ type: post
 There's an old joke in Programming that 90% of your time is spent naming things,
 and I think this extends into Homelabs and any other computer environment.
 
-Names are give your systems identifiable places, can describe where they are and
-what they do, and are the easiest way to identify something, so giving some
-thought into a naming system is worth it.
+Names are there give your systems identifiable places, can describe where they
+are and what they do, and are the easiest way to identify something, so giving
+some thought into a naming system is worth it.
 
 ## Styles of Naming
 
