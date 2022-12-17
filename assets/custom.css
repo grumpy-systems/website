@@ -62,3 +62,18 @@
 .icon-tiktok:before {
     content: "\e901";
 }
+
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid;
+    padding: 0.35rem;
+}
+
+table th {
+    border: 1px solid;
+    padding: 0.35rem;
+}
