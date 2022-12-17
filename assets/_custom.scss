@@ -1,0 +1,65 @@
+.social-button {
+    border: 1px solid #000;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 250px;
+    display: block;
+    color: inherit !important;
+
+    &:visited {
+        color: inherit !important;
+    }
+
+    margin-bottom: 1rem;
+
+    & i {
+        margin-right: 15px;
+    }
+}
+
+// Icomoon
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?31emmh');
+    src: url('fonts/icomoon.eot?31emmh#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?31emmh') format('truetype'),
+        url('fonts/icomoon.woff?31emmh') format('woff'),
+        url('fonts/icomoon.svg?31emmh#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
+
+.icon-youtube:before {
+    content: "\ea9d";
+}
+
+.icon-github:before {
+    content: "\e900";
+}
+
+.icon-tiktok:before {
+    content: "\e901";
+}
