@@ -40,3 +40,4 @@ params:
   oldContentWarning: true
   oldContentDuration: 1095 # 3 years
   disableThemeSwitcher: true
+  customCss: ["custom.css"]
