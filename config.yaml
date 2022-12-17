@@ -26,8 +26,8 @@ params:
   title: "I'm Grumpy"
   author: "Grumpy"
   description: "I make content about computers."
-  profilePicture: "https://placekitten.com/300/300"
+  profilePicture: "/grumpy.jpg"
   copyright: "{{ YEAR }} Grumpy"
   displayMode: "dark"
-  contentRatio: 0.7
+  contentRatio: 0.8
   doNotLoadAnimations: true
