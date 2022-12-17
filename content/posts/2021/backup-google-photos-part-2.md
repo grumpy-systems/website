@@ -41,7 +41,7 @@ path it's pulling from.
 Here's an example line from my CSV:
 
 ```csv
-"andrew","Houston","Andrew/Trips/2019.07 - Houston"
+"grumpy","Houston","Grumpy/Trips/2019.07 - Houston"
 ```
 
 ## The Script
@@ -57,7 +57,7 @@ set -e
 # Config Variables
 ###
 
-ANDREW_PHOTOS_PATH='<source_photos_path>'
+GRUMPY_PHOTOS_PATH='<source_photos_path>'
 
 MAP_FILE='/.../photo-paths.csv'
 OWNCLOUD_PATH='/.../shared/Photos/'
@@ -81,8 +81,8 @@ while IFS="," read -r user album dest; do
     dest=$temp
 
     # Get the right source based on the user column
-    if [ "$user" == "andrew" ]; then
-        SRC="$ANDREW_PHOTOS_PATH"
+    if [ "$user" == "grumpy" ]; then
+        SRC="$GRUMPY_PHOTOS_PATH"
     fi
 
     # If we don't have an SRC, skip this line
@@ -129,7 +129,7 @@ Here's what that script does:
 
 There's also a couple variables you'll need to edit at the top:
 
-* `ANDREW_PHOTOS_PATH` (but you can rename this) - This is the source of photos
+* `GRUMPY_PHOTOS_PATH` (but you can rename this) - This is the source of photos
   coming from `gphotos-sync`.  You'll want this path to be the base where you
   are syncing photos, ie the directory that contains both the `photos` and the
   `albums` directories.
