@@ -29,23 +29,23 @@ to just add a rule in `sudoers` for your user.  You can set up groups to allow
 multiple users to run things too.
 
 Create a new file in `/etc/sudoers.d` and call it anything you'd like, I call
-mine `andrew-apt`.  Fill it with these contents:
+mine `grumpy-apt`.  Fill it with these contents:
 
 ```plain
-andrew ALL= NOPASSWD: /usr/bin/apt, /usr/bin/apt-get
+grumpy ALL= NOPASSWD: /usr/bin/apt, /usr/bin/apt-get
 ```
 
-This allows the user `andrew` to run just `apt` and `apt-get` without a
+This allows the user `grumpy` to run just `apt` and `apt-get` without a
 password.  This won't affect your other permissions, so you'll still be able to
-run other commands with sudo with a password.  Replace `andrew` with whatever
+run other commands with sudo with a password.  Replace `grumpy` with whatever
 username you use.
 
 Make sure the file is owned by root and has permissions of `440`, otherwise Sudo
 won't load it.
 
 ```bash
-chown root:root /etc/sudoers.d/andrew-apt
-chmod 440 /etc/sudoers.d/andrew-apt
+chown root:root /etc/sudoers.d/grumpy-apt
+chmod 440 /etc/sudoers.d/grumpy-apt
 ```
 
 (be sure to replace the file names with what you called your file)

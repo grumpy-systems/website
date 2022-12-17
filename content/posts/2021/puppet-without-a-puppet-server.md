@@ -46,7 +46,7 @@ server.
 ## Demo Code
 
 I put a demo of how all of this works on
-[GitHub](https://github.com/akester/puppet-without-a-server), so feel free to
+[GitHub](https://github.com/grumpy-systems/puppet-without-a-server), so feel free to
 use it as a jumping off point for your setup.
 
 **This code is intended only to work with Debian based systems, so you will need
@@ -78,7 +78,7 @@ in `init.sh` and `update.sh` (in the `REPO` variable).
 If you do want to run the vanilla demo, you can use this example:
 
 ```bash
-curl -s https://raw.githubusercontent.com/akester/puppet-without-a-server/master/init.sh | bash
+curl -s https://raw.githubusercontent.com/grumpy-systems/puppet-without-a-server/master/init.sh | bash
 ```
 
 Run that as root to download, initialize, and run the demo.  Also feel free to

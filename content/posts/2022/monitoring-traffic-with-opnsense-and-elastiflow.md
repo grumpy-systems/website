@@ -61,7 +61,7 @@ can warrant more nodes, but for me this works.
 ## The Actual Setup
 
 There's a few files we need to create, so I opted to create a proper [GitHub
-repository](https://github.com/akester/elastiflow-example) for things.
+repository](https://github.com/grumpy-systems/elastiflow-example) for things.
 
 You'll need Docker and Docker Compose to run this, follow [Docker's
 docs](https://docs.docker.com/get-docker/) to install those.
@@ -79,7 +79,7 @@ cloned that repository to it:
 ```bash
 mkdir /opt/elastiflow
 chown you:you /opt/elastiflow
-git clone https://github.com/akester/elastiflow-example.git /opt/elastiflow
+git clone https://github.com/grumpy-systems/elastiflow-example.git /opt/elastiflow
 ```
 
 We now need to fix the Elasticsearch data directory.  Since Elasticsearch
