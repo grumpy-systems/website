@@ -8,6 +8,7 @@
     color: inherit !important;
     margin-bottom: 2rem;
     margin-right: 1rem;
+    box-sizing: border-box;
 }
     .social-button:visited {
         color: inherit !important;
