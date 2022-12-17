@@ -61,7 +61,7 @@ can warrant more nodes, but for me this works.
 ## The Actual Setup
 
 There's a few files we need to create, so I opted to create a proper [GitHub
-repository](https://github.com/grumpy-systems/elastiflow-example) for things.
+repository](https://github.com/grumpy-systems/elastiflow) for things.
 
 You'll need Docker and Docker Compose to run this, follow [Docker's
 docs](https://docs.docker.com/get-docker/) to install those.
