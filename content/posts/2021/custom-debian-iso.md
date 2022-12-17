@@ -44,7 +44,7 @@ Doing this is pretty straightforward, and I even made a system to do this
 automatically.  The scripts I wrote download the latest ISO, verify its
 checksum, then extract and repackage it with the required files to make things
 automated.  I've placed an example of all of this on
-[GitHub](https://github.com/grumpy-systems/custom-debian-iso).
+[GitHub](https://github.com/grumpy-systems/debian-preseed-iso).
 
 When finished, a single ISO file is output, and booting this ISO will launch a
 fully automated installation.  It's important to note that this installation
