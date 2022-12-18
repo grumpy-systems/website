@@ -1,6 +1,6 @@
 ---
 title: "The Cost Of Homelab Backups"
-date: 2022-12-22
+date: 2022-12-18
 tags: ["homelab", "datahoarder"]
 type: post
 ---
