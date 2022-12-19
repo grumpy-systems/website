@@ -15,7 +15,7 @@ fairly organized.  I try to keep these alphabetized, but that's quite the chore.
 
 As an aside, I name my rules in a standard way.  Here are some rule names:
 
-```plain
+```
 Ads / Tech / AWS
 FYI / Let's Encrypt
 Crons / Backups / Offsite

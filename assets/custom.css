@@ -87,25 +87,25 @@ table th {
     src: url('/fonts/ibm-plex-mono.ttf') format('truetype');
 }
 
-.highlight code {
+code.hljs {
     font-family: 'IBM Plex Mono', monospace;
     padding: 0 !important
 }
 
-.highlight code table td span {
+code.hljs table td span {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.highlight code table td {
+code.hljs table td {
     border: none;
     padding: 0 10px;
 }
 
-.highlight code table td:first-of-type {
+code.hljs table td:first-of-type {
    border-right: 1px solid grey;
    text-align: right;
 }
 
-.highlight code table {
+code.hljs table {
     border: none !important;
 }
