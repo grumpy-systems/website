@@ -69,7 +69,7 @@ go into all of them.  Most are self explanatory or have a sane default.
 When all setup, you should have a file in `~/.config/rclone/rclone.cfg` that
 looks like this:
 
-```cfg
+```
 [crypt]
 type = crypt
 remote = s3:<your bucket and path>
