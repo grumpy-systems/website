@@ -10,14 +10,15 @@
     margin-right: 1rem;
     box-sizing: border-box;
 }
-    .social-button:visited {
-        color: inherit !important;
-    }
 
-    .social-button i {
-        margin-right: 15px;
-        font-size: 2rem;
-    }
+.social-button:visited {
+    color: inherit !important;
+}
+
+.social-button i {
+    margin-right: 15px;
+    font-size: 2rem;
+}
 
 @font-face {
     font-family: 'icomoon';
@@ -76,4 +77,35 @@ table td {
 table th {
     border: 1px solid;
     padding: 0.35rem;
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/ibm-plex-mono.ttf') format('truetype');
+}
+
+.highlight code {
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 0 !important
+}
+
+.highlight code table td span {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.highlight code table td {
+    border: none;
+    padding: 0 10px;
+}
+
+.highlight code table td:first-of-type {
+   border-right: 1px solid grey;
+   text-align: right;
+}
+
+.highlight code table {
+    border: none !important;
 }

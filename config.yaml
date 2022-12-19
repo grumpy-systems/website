@@ -26,6 +26,10 @@ menu:
       url: /about/
       weight: 20
 
+markup:
+  highlight:
+    noClasses: false
+
 params:
   title: "I'm Grumpy"
   author: "Grumpy"
