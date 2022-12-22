@@ -1,9 +1,8 @@
 ---
 title: "Please Don't Sell Space In Your Homelab"
-date: 2022-12-22
+date: 2023-01-03
 tags: ["homelab"]
 type: post
-draft: true
 ---
 
 Hanging out in subreddits like [/r/homelab](https://reddit.com/r/homelab/),
