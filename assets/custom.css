@@ -109,3 +109,7 @@ code.hljs table td:first-of-type {
 code.hljs table {
     border: none !important;
 }
+
+blockquote {
+    font-size: 1.75rem;
+}
