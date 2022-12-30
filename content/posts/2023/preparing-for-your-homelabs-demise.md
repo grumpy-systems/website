@@ -1,6 +1,6 @@
 ---
 title: "Preparing For you Homelab's Demise"
-date: 2023-02-07
+date: 2023-02-12
 tags: ["homelab", "tools", "how-to"]
 type: post
 ---

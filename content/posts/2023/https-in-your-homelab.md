@@ -1,6 +1,6 @@
 ---
 title: "Using HTTPS In Your Homelab, And Why It's Important"
-date: 2023-01-19
+date: 2023-01-25
 tags: ["homelab", "how-to", "linux"]
 type: post
 ---
