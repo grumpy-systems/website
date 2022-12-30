@@ -15,6 +15,8 @@ don't panic)
 {{< social-tag icon="icon-github" link="https://github.com/grumpy-systems" name="GitHub" >}}
 {{< social-tag icon="icon-youtube" link="https://www.youtube.com/channel/UCnQkxe-l11qWYkwyg_svUCw" name="YouTube" >}}
 {{< social-tag icon="icon-reddit" link="https://reddit.com/u/grumpy-systems" name="Reddit" >}}
+{{< social-tag icon="icon-mastodon" link="https://infosec.exchange/@grumpysystems" name="Infosec.Exchange" >}}
+
 
 ***
 
