@@ -1,7 +1,7 @@
 ---
 title: "Please Don't Sell Space In Your Homelab"
 date: 2023-01-03
-tags: ["homelab"]
+tags: ["homelab", "linux", "startups"]
 type: post
 ---
 
