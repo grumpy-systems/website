@@ -201,7 +201,7 @@ you host.
 
 If you're set on using up extra CPU cycles, here are some options:
 
-* **Host more of your stuff** - Maybe you do need that extra media server of a seedbox.
+* **Host more of your stuff** - Maybe you do need that extra media server or a seedbox.
 * **Host stuff for friends** - Friends are different because you probably trust
   them.  A lot of the issues of customers taking advantage of you are mitigated
   by being friends.
