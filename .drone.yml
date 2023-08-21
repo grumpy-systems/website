@@ -3,6 +3,9 @@ kind: pipeline
 name: build
 type: docker
 
+concurrency:
+  limit: 1
+
 steps:
 - name: submodules
   image: alpine/git
