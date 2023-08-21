@@ -20,16 +20,17 @@ steps:
     url: https://grumpy.systems
 
 - name: deploy
-  image: appleboy/drone-scp
+  image: drillster/drone-rsync
   settings:
-    host: 10.10.0.25
-    username: grumpy.systems
+    hosts: [10.10.0.23]
+    user: grumpy.systems
     key:
-      from_secret: hosted_ssh_key
-    port: 22
-    target: /home/grumpy.systems/public_html
+      from_secret: deploy_key
+    port: 2222
+    target: /home/web/html/
     source: public/*
-    strip_components: 1
+    delete: true
+    recursive: true
   when:
     branch:
       - master
