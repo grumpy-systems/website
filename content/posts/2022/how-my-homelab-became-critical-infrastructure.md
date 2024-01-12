@@ -34,14 +34,15 @@ that I feel are required during these events:
 Depending on the severity of the storm, a number of things can fail that make
 getting those two things harder:
 
-* **Power will probably go out.**  Wind snaps poles and trees, and tornadoes
+* **Power will probably go out.**  Wind snaps poles and trees, and tornados
   destroy miles of lines that can take a long while to repair.  If you don't
   have power, you're either without TV and Internet information sources, or
   you're relying on UPS power.
-* **Cell phones will stop working.**  Once a tornado warning gets issued, even if
-  there isn't a tornado), your cell phone will probably stop working.  I imagine
-  the unwritten rule about calling everyone you know comes into play to some
-  extent, but winds and lightning probably damage towers to knock them offline.
+* **Cell phones will stop working.**  Once a tornado warning gets issued, even
+  if there isn't a tornado, your cell phone will probably stop working.  I
+  imagine the unwritten rule about calling everyone you know comes into play to
+  some extent, but winds and lightning probably damage towers to knock them
+  offline.
 * Both these services may be down for hours, but the storm may only last a few
   minutes.  Tornados especially are brief events, you may have an hour of
   warning but the damage and danger only lasts 30 minutes or so.  Any backup
