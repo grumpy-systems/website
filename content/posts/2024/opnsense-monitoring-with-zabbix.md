@@ -3,7 +3,6 @@ title: "OPNSense Monitoring With Zabbix"
 date: 2024-01-11
 tags: ["homelab", "how-to", "tools"]
 type: post
-draft: true
 ---
 
 One thing that is a key asset in any environment is reliable, thorough
