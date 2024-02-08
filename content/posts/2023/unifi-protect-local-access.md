@@ -98,10 +98,14 @@ fine, but set these values:
 
 * **Action**: Pass
 * **Protocol**: UDP
-* **Destination**: Single host or Network / 233.89.188.1/32
+* **Destination**: Single host or Network / 255.255.255.255/32
 * **Destination Port**: 10001
 
 ![Setup Screen](/images/2023.12-Protect2.png)
+
+**Note:** This IP changed since the original post.  I noticed that either by my
+omission or by a change in the Unifi Protect app, it now sends normal broadcast
+data rather than multicast.  The above step has been updated
 
 And to allow the return packets, we need an out rule also set up on the LAN
 network.  In my case, I use [Out rules](/2023/cleaning-up-firewall-rules/) for
