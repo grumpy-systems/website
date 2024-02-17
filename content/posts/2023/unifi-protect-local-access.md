@@ -81,7 +81,7 @@ Next, navigate to Services > UDP Broadcast Relay and click the plus to add a new
   that should have NVR access
 * **Broadcast Address**: 233.89.188.1 (This the multicast address used by the Unifi
   Discovery protocol)
-* **Sourrce Address**: Blank
+* **Source Address**: Blank
 * **Instance ID**: Any number, probably 1 if this is your first instance.
 
 ![Setup Screen](/images/2023.12-Protect1.png)
