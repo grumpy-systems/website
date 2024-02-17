@@ -232,8 +232,8 @@ Like before, add that to `/usr/home/gws.py`.
 
 Now we need to inform Zabbix about how these scripts can be used.    Once you've
 installed the Zabbix plugin in OPNSense and added any needed firewall rules, you
-should a "Zabbix Agent" section now under Services.  Navigate to the settings
-page, and the "Advanced" tab.
+should have a "Zabbix Agent" section now under Services.  Navigate to the
+settings page, and the "Advanced" tab.
 
 We'll create 4 user parameters.  There's only a few options on each, and they'll
 generally look the same.

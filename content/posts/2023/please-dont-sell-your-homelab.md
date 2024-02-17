@@ -172,7 +172,7 @@ is trivial, but configuration problems can make it a pretty low hurdle.
 ### Patches and 0-Days
 
 Keeping your setup updates is now mandatory.  Every piece needs to always be up
-to date, because a small foothold can all it takes for someone to gain entry.
+to date, because a small foothold is all it takes for someone to gain entry.
 
 Your customers are also going to hound you for every CVE that hits the news,
 even if you aren't affected.  You'll need to review them and either update
