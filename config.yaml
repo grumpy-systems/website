@@ -25,6 +25,11 @@ menu:
       name: About
       url: /about/
       weight: 20
+  footer:
+    - identifier: key
+      name: Public key
+      url: /pub.asc
+      weight: 10
 
 markup:
   highlight:
