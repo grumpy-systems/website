@@ -17,7 +17,7 @@ steps:
   image: plugins/hugo
 
   settings:
-    hugo_version: 0.68.3
+    hugo_version: 0.123.0
     validate: true
     extended: true
     url: https://grumpy.systems
