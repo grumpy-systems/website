@@ -1,6 +1,6 @@
 ---
 title: "Ramblings on Shitty Consumer Internet"
-date: 2024-05-01
+date: 2024-05-02
 tags: ["homelab", "random"]
 type: post
 ---
