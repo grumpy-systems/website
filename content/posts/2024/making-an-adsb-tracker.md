@@ -3,7 +3,6 @@ title: "Making an ADS-B Airplane Tracker"
 date: 2024-06-15
 tags: ["random", "how-to"]
 type: post
-draft: true
 ---
 
 This is the first hardware based project I've shared, but this is how I built my
