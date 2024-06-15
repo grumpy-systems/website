@@ -85,7 +85,7 @@ Here's a block diagram of all the parts:
 
 ![Block Diagram](/images/2024.06-ADSB/BlockDiagram.png)
 
-There's a few components and systems, so I'll split it up into talking about
+There're a few components and systems, so I'll split it up into talking about
 each "system."  If there's parts that are more or less relevant, you can tailor
 your reading as such.
 
@@ -268,9 +268,13 @@ Then use the up and down arrows to set a value.  After a few seconds, it'll be
 saved.  This unit can heat or cool, and you can set how the hysteresis you'd
 like.  To cool, set a start number (the one programed with the up arrow) to when
 you'd like the fans to start.  Set the stop value (the one programmed with the
-down arrow) to a value lower.  I set a start value of 33C and a stop value of
-28C, and placed the sensor behind the pi in the void space between it and DIN
-rail.
+down arrow) to a value lower.
+
+I tucked the temperature probe between the two SDRs since they seem to be the
+hottest components.  The start temp is set to 48 degrees, and the stop
+temperature is 35 degrees.  My goal is to run the fan fairly infrequently and
+run it for a few minutes at a time.  Sitting inside the fans run once every few
+hours for about a minute.
 
 After pictures, I also drilled two holes on the bottom to act as an exhaust,
 while the fans intake air above.  If you don't have a place for the air to
@@ -285,12 +289,11 @@ Thoughts here:
 * I don't have good suggestions for drilling the holes.  Mine don't look good,
   but they're covered by the fan screens anyway.
 * One fan might be enough.  The fans I got move quite a bit of air.
-* I had originally put the temp sensor on the SDRs themselves, but I couldn't
-  find a great way to get them to stick and it cycled the fans quite a bit even
-  when the enclosure wasn't hot.  Putting the sensor in some dead air space
-  helped by avoiding direct airflow from the fans and the ambient temperature is
-  much more stable.  The SDRs don't seem to mind and are kept in check with
-  their heatsinks.
+* I stuck the temperature probe between the two SDRs and stuck it to the DIN
+  rail mount for Pis with a dollop of hot glue.  I checked the temperature using
+  a infrared thermometer to make sure they weren't too hot.  Make sure you
+  verify things to ensure the temperature probe is getting a semi accurate
+  temerature.
 
 Parts for this section and notes:
 
