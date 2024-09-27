@@ -8,8 +8,6 @@ type: post
 This is the first hardware based project I've shared, but this is how I built my
 ADS-B Tracker.
 
-<overview picture>
-
 ## What's ADS-B and Why Track It
 
 Most (not all) airplanes are required to broadcast their position as they fly
