@@ -34,4 +34,11 @@ code.hljs table {
 blockquote {
     font-size: 1.75rem;
 }
-  
+
+.alert {
+    margin-top: 3rem;
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    margin-bottom: 15px;
+}

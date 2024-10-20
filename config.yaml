@@ -73,6 +73,8 @@ params:
     - name: mastodon
       url: https://infosec.exchange/@grumpysystems
 
+  oldContentWarning: true
+
 
 #   title: "I'm Grumpy"
 #   author: "Grumpy"
