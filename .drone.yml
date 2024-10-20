@@ -20,6 +20,7 @@ steps:
     validate: true
     extended: true
     url: https://grumpy.systems
+    hugo_version: 0.136
 
 - name: deploy
   image: drillster/drone-rsync
