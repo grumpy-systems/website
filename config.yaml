@@ -75,6 +75,7 @@ params:
       url: https://infosec.exchange/@grumpysystems
 
   oldContentWarning: true
+  oldContentDuration: 1095
 
 minify:
   minifyOutput: true
