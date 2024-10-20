@@ -14,7 +14,7 @@ steps:
   - git submodule update --recursive
 
 - name: hugo
-  image: debian/bullseye
+  image: debian:bullseye
   commands:
   - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.136.2/hugo_0.136.2_linux-amd64.deb
   - dpkg -i /tmp/hugo.deb
