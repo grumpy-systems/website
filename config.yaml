@@ -1,7 +1,7 @@
 baseURL: "https://grumpy.systems/"
 languageCode: "en-us"
 title: "Grumpy"
-theme: "anatole"
+theme: "gokarna"
 
 permalinks:
   posts: /:year/:title/
@@ -21,32 +21,45 @@ menu:
       name: Posts
       url: /posts/
       weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
     - identifier: about
       name: About
       url: /about/
       weight: 20
-  footer:
-    - identifier: key
-      name: Public key
-      url: /pub.asc
-      weight: 10
 
 markup:
   highlight:
     noClasses: false
 
 params:
-  title: "I'm Grumpy"
-  author: "Grumpy"
-  description: "I make content about computers and build things."
-  profilePicture: "/grumpy.jpg"
-  copyright: "{{ YEAR }} Grumpy"
-  displayMode: "dark"
-  contentRatio: 0.8
-  doNotLoadAnimations: true
-  readMore: true
-  mainSections: ["post"]
-  oldContentWarning: true
-  oldContentDuration: 1095 # 3 years
-  disableThemeSwitcher: true
-  customCss: ["custom.css"]
+  avatarURL: '/grumpy.jpg'
+  customHeadHTML: |
+    <!-- Highlight -->
+    <link rel="stylesheet" href="/vendor/highlight/styles/stackoverflow-dark.min.css">
+  dateFormat: "January 2, 2006"
+
+  numberPostsOnHomePage: 5
+  showPostsOnHomePage: recent
+
+  showBackToTopButton: true
+  togglePreviousAndNextButtons: true
+
+  footer: Grumpy
+
+#   title: "I'm Grumpy"
+#   author: "Grumpy"
+#   description: "I make content about computers and build things."
+#   profilePicture: "/grumpy.jpg"
+#   copyright: "{{ YEAR }} Grumpy"
+#   displayMode: "dark"
+#   contentRatio: 0.8
+#   doNotLoadAnimations: true
+#   readMore: true
+#   mainSections: ["post"]
+#   oldContentWarning: true
+#   oldContentDuration: 1095 # 3 years
+#   disableThemeSwitcher: true
+#   customCss: ["custom.css"]
