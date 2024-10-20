@@ -1,5 +1,6 @@
 baseURL: "https://grumpy.systems/"
-languageCode: "en-us"
+languageCode: "en"
+defaultContentLanguage: "en"
 title: "Grumpy"
 theme: "gokarna"
 
@@ -75,18 +76,5 @@ params:
 
   oldContentWarning: true
 
-
-#   title: "I'm Grumpy"
-#   author: "Grumpy"
-#   description: "I make content about computers and build things."
-#   profilePicture: "/grumpy.jpg"
-#   copyright: "{{ YEAR }} Grumpy"
-#   displayMode: "dark"
-#   contentRatio: 0.8
-#   doNotLoadAnimations: true
-#   readMore: true
-#   mainSections: ["post"]
-#   oldContentWarning: true
-#   oldContentDuration: 1095 # 3 years
-#   disableThemeSwitcher: true
-#   customCss: ["custom.css"]
+minify:
+  minifyOutput: true
