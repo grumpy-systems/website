@@ -14,10 +14,9 @@ steps:
   - git submodule update --recursive
 
 - name: hugo
-  image: debian:bullseye
+  image: registry.gatewayks.net/hugo/hugo
   commands:
-  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.136.2/hugo_0.136.2_linux-amd64.deb
-  - dpkg -i /tmp/hugo.deb
+  - hugo build
 
 - name: deploy
   image: drillster/drone-rsync
