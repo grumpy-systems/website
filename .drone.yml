@@ -14,13 +14,10 @@ steps:
   - git submodule update --recursive
 
 - name: hugo
-  image: plugins/hugo
-
-  settings:
-    validate: true
-    extended: true
-    url: https://grumpy.systems
-    hugo_version: 0.136
+  image: debian/bullseye
+  commands:
+  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.136.2/hugo_0.136.2_linux-amd64.deb
+  - dpkg -i /tmp/hugo.deb
 
 - name: deploy
   image: drillster/drone-rsync
