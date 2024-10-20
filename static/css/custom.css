@@ -1,0 +1,37 @@
+/* Highlight */
+@font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/ibm-plex-mono.ttf') format('truetype');
+}
+
+code.hljs {
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 0 !important
+}
+
+code.hljs table td span {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+code.hljs table td {
+    border: none;
+    padding: 0 10px;
+}
+
+code.hljs table td:first-of-type {
+   border-right: 1px solid grey;
+   text-align: right;
+}
+
+code.hljs table {
+    border: none !important;
+}
+
+/* Blockquote */
+blockquote {
+    font-size: 1.75rem;
+}
+  

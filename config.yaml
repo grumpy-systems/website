@@ -39,6 +39,16 @@ params:
   customHeadHTML: |
     <!-- Highlight -->
     <link rel="stylesheet" href="/vendor/highlight/styles/stackoverflow-dark.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+  customFooterHTML: |
+    <!-- Highlight -->
+    <script src="/vendor/highlight/highlight.min.js"></script>
+    <script src="/vendor/highlight-numbers.min.js"></script>
+
+    <script>
+      hljs.highlightAll();
+      hljs.initLineNumbersOnLoad();
+    </script>
   dateFormat: "January 2, 2006"
 
   numberPostsOnHomePage: 5
@@ -48,6 +58,21 @@ params:
   togglePreviousAndNextButtons: true
 
   footer: Grumpy
+
+  description: I make content about computers and build things.
+
+  socialIcons:
+    - name: tiktok
+      url: https://www.tiktok.com/@grumpy.systems
+    - name: github
+      url: https://github.com/grumpy-systems
+    - name: youtube
+      url: https://www.youtube.com/channel/UCnQkxe-l11qWYkwyg_svUCw
+    - name: reddit
+      url: https://reddit.com/u/grumpy-systems
+    - name: mastodon
+      url: https://infosec.exchange/@grumpysystems
+
 
 #   title: "I'm Grumpy"
 #   author: "Grumpy"
