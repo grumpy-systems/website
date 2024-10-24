@@ -73,6 +73,8 @@ params:
       url: https://reddit.com/u/grumpy-systems
     - name: mastodon
       url: https://infosec.exchange/@grumpysystems
+    - name: email
+      url: mailto:grumpy.systems@gmail.com
 
   oldContentWarning: true
   oldContentDuration: 1095
