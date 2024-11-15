@@ -33,3 +33,25 @@ steps:
   when:
     branch:
       - master
+
+- name: cache
+  image: alpine
+  when:
+    branch:
+      include:
+        - master
+    event:
+      exclude:
+        - pull_request
+
+  environment:
+    CF_API_KEY:
+      from_secret: cf_api_key
+    CF_EMAIL:
+      from_secret: cf_email
+    ZONE_ID:
+      from_secret: zone_id
+
+  commands:
+    - apk add --update bash curl
+    - bash purge.sh
