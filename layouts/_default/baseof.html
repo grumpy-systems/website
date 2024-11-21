@@ -24,12 +24,50 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
-        gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'analytics_storage': 'granted'
-        });
+        const consentRevokedKey = "consent_revoked"
+        const optOutPageLink = document.getElementById('optout')
+
+        function revokeConsent(event) {
+            event.preventDefault();
+
+            localStorage.setItem(consentRevokedKey, "true")
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+
+            // Update the link to be better text
+            if (optOutPageLink) {
+                optOutPageLink.innerHTML = "You've been opted out.";
+            }
+        }
+
+        if (localStorage.getItem(consentRevokedKey)) {
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+
+            if (optOutPageLink) {
+                optOutPageLink.innerHTML = "You've already opted out of cookies.";
+            }
+        } else {
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'granted'
+            });
+        }
+
+        if (optOutPageLink) {
+            // Listen for the opt out event, then update the consent.
+            optOutPageLink.addEventListener("click", revokeConsent);
+        }
 
         gtag('js', new Date());
         gtag('config', 'G-NK3CQ4XPCB');
