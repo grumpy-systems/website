@@ -232,27 +232,31 @@ Like before, add that to `/usr/home/gws.py`.
 
 Now we need to inform Zabbix about how these scripts can be used.    Once you've
 installed the Zabbix plugin in OPNSense and added any needed firewall rules, you
-should have a "Zabbix Agent" section now under Services.  Navigate to the
-settings page, and the "Advanced" tab.
+should have a "Zabbix Agent" section now under Services.
 
-We'll create 4 user parameters.  There's only a few options on each, and they'll
-generally look the same.
+On the overview page, make sure "Enable sudo root permissions" is checked.  The
+configuration file for Opnsense is owned by root, so our script will have to use
+sudo to be able to access the config files.
+
+Navigate to the settings page, and the "Advanced" tab. We'll create 4 user
+parameters.  There's only a few options on each, and they'll generally look the
+same.
 
 ![Setup Screen](/images/2024.01-Zabbix1.png)
 
 * LLD for Gateways
   * **Key**: opn.gws
-  * **Command**: python3 /usr/home/gws.py 
+  * **Command**: sudo python3 /usr/home/gws.py 
 * Single Gateway Data
   * **Key**: opn.gw_data
-  * **Command**: python3 /usr/home/gws.py $1 $2
+  * **Command**: sudo python3 /usr/home/gws.py $1 $2
   * **Accept Parameters**: Checked
 * LLD for Interfaces
   * **Key**: opn.interfaces
-  * **Command**: python3 /usr/home/interface.py 
+  * **Command**: sudo python3 /usr/home/interface.py 
 * Single Interface Data
   * **Key**: opn.interface_value
-  * **Command**: python3 /usr/home/interface.py $1 $2
+  * **Command**: sudo python3 /usr/home/interface.py $1 $2
   * **Accept Parameters**: Checked
 
 Apply the changes to restart the Zabbix Agent.
