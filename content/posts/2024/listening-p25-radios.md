@@ -1,7 +1,7 @@
 ---
 title: "Listening to P25 Radios with a Raspberry Pi and Trunk Recorder"
 date: 2024-09-27
-tags: ["random", "how-to"]
+tags: ["how-to", "radios"]
 type: post
 toc: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Making an ADS-B Airplane Tracker"
 date: 2024-06-15
-tags: ["random", "how-to"]
+tags: ["how-to", "radios"]
 type: post
 ---
 
