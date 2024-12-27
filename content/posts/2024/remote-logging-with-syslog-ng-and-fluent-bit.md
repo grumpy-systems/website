@@ -8,11 +8,11 @@ type: post
 One good practice for most environments is centralized logging.  This is
 recommended in a number of security benchmarks, but the idea is largely to keep
 logs outside a device that can get compromised.  If a device does get taken
-over, even if it's wiped clean the logs and traces of what went wrong can
+over, even if it's wiped clean, the logs and traces of what went wrong can
 hopefully survive.
 
 Even in my homelab, I still see benefit.  Some network gear, namely my Unifi
-switches and Access Points keep very good logs but they are reset every time a
+switches and Access Points, keep very good logs but they are reset every time a
 device reboots.  Alongside this, having logs in one place is a great benefit
 just for visibility into what's going on.
 
@@ -33,8 +33,6 @@ looked at:
 * These tools were very, very heavy.  System requirements needed several GB of
   memory and lots of CPU, which seemed excessive since I didn't plan on using
   this log tool every day.
-
-There's a much simpler solution, though, and that's `syslog-ng`.
 
 If you look at basic packages that take logs in and write them to a folder, the
 two big players are `rsyslog` and `syslog-ng`.  Both were good choices, but I
