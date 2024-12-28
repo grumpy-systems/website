@@ -1,6 +1,6 @@
 ---
 title: "Extending a UPS with a Power Station"
-date: 2025-02-15
+date: 2025-02-21
 tags: ["homelab", "how-to"]
 type: post
 ---
