@@ -1,0 +1,523 @@
+zabbix_export:
+  version: '6.4'
+  template_groups:
+    - uuid: a571c0d144b14fd4a87a9d9b2aa9fcd6
+      name: Templates/Applications
+  templates:
+    - uuid: 9dcc15035b9d4622b51835e100746166
+      template: 'Trunk Recorder Host'
+      name: 'Trunk Recorder Host'
+      groups:
+        - name: Templates/Applications
+      items:
+        - uuid: 4999d300ffcd4155a5fa81f113a61c11
+          name: 'Trunk Recorder: Metrics'
+          type: HTTP_AGENT
+          key: tr.metrics
+          value_type: TEXT
+          trends: '0'
+          url: 'http://{HOST.CONN}:9842/metrics'
+          tags:
+            - tag: application
+              value: trunk-recorder
+      discovery_rules:
+        - uuid: 70df917adb41424988bae83e7781b671
+          name: 'Trunk Recorder: Encrypted Talkgroups'
+          type: DEPENDENT
+          key: tr.enc_talkgroups
+          delay: '0'
+          filter:
+            conditions:
+              - macro: '{#TALKGROUP}'
+                value: ^-$
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+          item_prototypes:
+            - uuid: 0475b725e9344d7384a64125428821e5
+              name: 'Calls on {#TALKGROUP} (Encrypted)'
+              type: DEPENDENT
+              key: 'tr.enc_talkgroups_calls.[{#TGID}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_calls{talkgroup="{#TGID}",encrypted="1"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: talkgroup
+                  value: '{#TALKGROUP}'
+          master_item:
+            key: tr.metrics
+          lld_macro_paths:
+            - lld_macro: '{#SYSTEM}'
+              path: '$.labels[''system'']'
+            - lld_macro: '{#TALKGROUP}'
+              path: '$.labels[''talkgroup_tag'']'
+            - lld_macro: '{#TGID}'
+              path: '$.labels[''talkgroup'']'
+          preprocessing:
+            - type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'trunk_recorder_calls{encrypted="1",system=~".*",talkgroup_tag=~".*",talkgroup=~".*"}'
+        - uuid: 4f5ace8186524ad69a51d834bf4883b1
+          name: 'Trunk Recorder: Frequencies'
+          type: DEPENDENT
+          key: tr.frequencies
+          delay: '0'
+          item_prototypes:
+            - uuid: 7c505e5278824179a1646841d069b5dc
+              name: 'Calls on frequency {#FREQ}'
+              type: DEPENDENT
+              key: 'tr.frequency_calls[{#FREQ}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_calls{freq="{#FREQ}"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: freq
+                  value: '{#FREQ}'
+            - uuid: 7bd1398e64eb4039aa6b98a16eed32d4
+              name: 'Errors on  frequency {#FREQ}'
+              type: DEPENDENT
+              key: 'tr.frequency_errors[{#FREQ}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - trunk_recorder_call_error_count
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: freq
+                  value: '{#FREQ}'
+            - uuid: eff03469e88e45c49ccbcd17f066c78e
+              name: 'Spikes on frequency {#FREQ}'
+              type: DEPENDENT
+              key: 'tr.frequency_spikes[{#FREQ}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_call_spike_count{freq="{#FREQ}"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: freq
+                  value: '{#FREQ}'
+          master_item:
+            key: tr.metrics
+          lld_macro_paths:
+            - lld_macro: '{#FREQ}'
+              path: '$.labels[''freq'']'
+          preprocessing:
+            - type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'trunk_recorder_calls{freq=~".*"}'
+        - uuid: ced3428bd56a418fb2b9c73f80f9efe3
+          name: 'Trunk Recorder: Sources'
+          type: DEPENDENT
+          key: tr.sources
+          delay: '0'
+          item_prototypes:
+            - uuid: 6f1543e289424872b946d409e2fc30b1
+              name: 'Available Analog Recorders On {#SOURCE}'
+              type: DEPENDENT
+              key: 'tf.source_analog[{#SOURCE}]'
+              delay: '0'
+              history: 7d
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_source_analog_recorders{device="{#SOURCE}"}'
+                    - value
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: source
+                  value: '{#SOURCE}'
+            - uuid: 801615e8dcbc48e28ca9dda8d1b94780
+              name: 'Available Digital Recorders On {#SOURCE}'
+              type: DEPENDENT
+              key: 'tf.source_digital[{#SOURCE}]'
+              delay: '0'
+              history: 7d
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_source_digital_recorders{device="{#SOURCE}"}'
+                    - value
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: source
+                  value: '{#SOURCE}'
+              trigger_prototypes:
+                - uuid: 110f1306c3fe42f8951a9fb7b1cdd183
+                  expression: 'max(/Trunk Recorder Host/tf.source_digital[{#SOURCE}],5m)<=2'
+                  name: 'Low Recorders On {#SOURCE}'
+                  priority: INFO
+                  tags:
+                    - tag: application
+                      value: trunk-recorder
+                    - tag: source
+                      value: '{#SOURCE}'
+                - uuid: 6532732dd5da41738cdf875b52296c88
+                  expression: 'max(/Trunk Recorder Host/tf.source_digital[{#SOURCE}],1m)=0'
+                  name: 'No Available Recorders On {#SOURCE}'
+                  priority: AVERAGE
+                  tags:
+                    - tag: application
+                      value: trunk-recorder
+                    - tag: source
+                      value: '{#SOURCE}'
+            - uuid: e1e549fc0e1f43b59c1f42100d8d2d59
+              name: 'Source Error Count On {#SOURCE}'
+              type: DEPENDENT
+              key: 'tf.source_errors[{#SOURCE}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_source_error_count{device="{#SOURCE}"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: source
+                  value: '{#SOURCE}'
+          master_item:
+            key: tr.metrics
+          lld_macro_paths:
+            - lld_macro: '{#SOURCE}'
+              path: '$.labels[''device'']'
+          preprocessing:
+            - type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'trunk_recorder_source_digital_recorders{device=~".*"}'
+        - uuid: 7a291536b9514d06b337f7183663c442
+          name: 'Trunk Recorder: Systems'
+          type: DEPENDENT
+          key: tr.systems
+          delay: '0'
+          item_prototypes:
+            - uuid: e5f5e77ecab04ab1abe90b70e82d78d9
+              name: 'Active Calls on {#SYSTEM}'
+              type: DEPENDENT
+              key: 'tr.calls_active[{#SYSTEM}]'
+              delay: '0'
+              history: 7d
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_active_calls{system="{#SYSTEM}"}'
+                    - value
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: system
+                  value: '{#SYSTEM}'
+            - uuid: d2681dd8561042369d74cf1cc52815c3
+              name: 'Unkown Talkgroup Calls on {#SYSTEM}'
+              type: DEPENDENT
+              key: 'tr.calls_unknown[{#SYSTEM}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_calls{system="{#SYSTEM}",talkgroup_tag="-"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: system
+                  value: '{#SYSTEM}'
+            - uuid: f2e226549cd84e57a696b31923c3e045
+              name: 'Message Decode Rate on {#SYSTEM}'
+              type: DEPENDENT
+              key: 'tr.decode_rate[{#SYSTEM}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_message_decodes{system="{#SYSTEM}"}'
+                    - value
+                    - ''
+                - type: CHANGE_PER_SECOND
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: system
+                  value: '{#SYSTEM}'
+          master_item:
+            key: tr.metrics
+          lld_macro_paths:
+            - lld_macro: '{#SYSTEM}'
+              path: '$.labels[''system'']'
+          preprocessing:
+            - type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'trunk_recorder_active_calls{system=~".*"}'
+        - uuid: a393d0f99fe44aafb73766676a7a21c2
+          name: 'Trunk Recorder: Talkgroups'
+          type: DEPENDENT
+          key: tr.talkgroups
+          delay: '0'
+          filter:
+            conditions:
+              - macro: '{#TALKGROUP}'
+                value: ^-$
+                operator: NOT_MATCHES_REGEX
+                formulaid: A
+          item_prototypes:
+            - uuid: cca927c210dc47e5a1ac781c5757b0a0
+              name: 'Calls on {#TALKGROUP}'
+              type: DEPENDENT
+              key: 'tr.talkgroups_calls.[{#TGID}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_calls{system="{#SYSTEM}",talkgroup="{#TGID}"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: talkgroup
+                  value: '{#TALKGROUP}'
+            - uuid: 862421111cb5465bb5c8d3e3898fea8f
+              name: 'Errors on {#TALKGROUP}'
+              type: DEPENDENT
+              key: 'tr.talkgroups_errors.[{#TGID}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_call_error_count{system="{#SYSTEM}",talkgroup="{#TGID}"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: talkgroup
+                  value: '{#TALKGROUP}'
+            - uuid: e145ef992c0544c7acaa0401594e03e0
+              name: 'Spikes on {#TALKGROUP}'
+              type: DEPENDENT
+              key: 'tr.talkgroups_spike.[{#TGID}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: PROMETHEUS_PATTERN
+                  parameters:
+                    - 'trunk_recorder_call_spike_count{system="{#SYSTEM}",talkgroup="{#TGID}"}'
+                    - function
+                    - sum
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: tr.metrics
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: talkgroup
+                  value: '{#TALKGROUP}'
+          master_item:
+            key: tr.metrics
+          lld_macro_paths:
+            - lld_macro: '{#SYSTEM}'
+              path: '$.labels[''system'']'
+            - lld_macro: '{#TALKGROUP}'
+              path: '$.labels[''talkgroup_tag'']'
+            - lld_macro: '{#TGID}'
+              path: '$.labels[''talkgroup'']'
+          preprocessing:
+            - type: PROMETHEUS_TO_JSON
+              parameters:
+                - 'trunk_recorder_calls{system=~".*",talkgroup_tag=~".*",talkgroup=~".*"}'
+        - uuid: cc86eff536564ba8b3402221ec4d0308
+          name: 'Trunk Recorder: Streams'
+          key: 'vfs.dir.get[/opt/trunk-recorder/streams,.*.stats]'
+          item_prototypes:
+            - uuid: 2a8825e0e73541cb84922d4cadf8cf5e
+              name: 'Fails on Stream {#STREAM}'
+              type: DEPENDENT
+              key: 'tr.stream.fail_rate[{#STREAM}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: JSONPATH
+                  parameters:
+                    - $.fails
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: 'vfs.file.contents[/opt/trunk-recorder/streams/{#STREAM}.stats]'
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: stream
+                  value: '{#STREAM}'
+              trigger_prototypes:
+                - uuid: 4df4495d0a1d47b6a11a3605528df7ed
+                  expression: 'min(/Trunk Recorder Host/tr.stream.fail_rate[{#STREAM}],1h)>0'
+                  name: 'Stream {#STREAM}: Call failures in last 1h'
+                  priority: AVERAGE
+                  tags:
+                    - tag: application
+                      value: trunk-recorder
+                    - tag: stream
+                      value: '{#STREAM}'
+            - uuid: 737455e2fee948ad856df3fae7477e15
+              name: 'Calls on Stream {#STREAM}'
+              type: DEPENDENT
+              key: 'tr.stream.ok_rate[{#STREAM}]'
+              delay: '0'
+              history: 7d
+              value_type: FLOAT
+              trends: 90d
+              preprocessing:
+                - type: JSONPATH
+                  parameters:
+                    - $.ok
+                - type: SIMPLE_CHANGE
+                  parameters:
+                    - ''
+              master_item:
+                key: 'vfs.file.contents[/opt/trunk-recorder/streams/{#STREAM}.stats]'
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: stream
+                  value: '{#STREAM}'
+              trigger_prototypes:
+                - uuid: d81699a95d4749789664cd09452c6223
+                  expression: 'max(/Trunk Recorder Host/tr.stream.ok_rate[{#STREAM}],8h)=0'
+                  name: 'Stream {#STREAM}: No new calls for 8 hours'
+                  priority: WARNING
+                  tags:
+                    - tag: application
+                      value: trunk-recorder
+                    - tag: stream
+                      value: '{#STREAM}'
+            - uuid: 65d6c0b9f84f4d10923e4fea5298f019
+              name: 'Stream Stats: {#STREAM}'
+              key: 'vfs.file.contents[/opt/trunk-recorder/streams/{#STREAM}.stats]'
+              value_type: TEXT
+              trends: '0'
+              tags:
+                - tag: application
+                  value: trunk-recorder
+                - tag: stream
+                  value: '{#STREAM}'
+          lld_macro_paths:
+            - lld_macro: '{#STREAM}'
+              path: $..basename.first()
+          preprocessing:
+            - type: STR_REPLACE
+              parameters:
+                - .stats
+                - ''

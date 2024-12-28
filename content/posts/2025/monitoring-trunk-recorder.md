@@ -16,12 +16,12 @@ data about the messages we're seeing.
 ## Metrics We Care About
 
 There's a few fairly important metrics we want to look at to monitor the health
-of our SDR and RF chain.
+of our SDR and RF chain, and a lot of good to know but less important metrics.
 
-The first is the message decode rate.  This is the rate of control channel
-messages that are seen, and in theory should be close to 40 messages per second.
-If your RF chain is having reception issues, this rate will drop and you'll
-start to hear choppy audio or missed transmissions.
+The first important one is the message decode rate.  This is the rate of control
+channel messages that are seen, and in theory should be close to 40 messages per
+second. If your RF chain is having reception issues, this rate will drop and
+you'll start to hear choppy audio or missed transmissions.
 
 Another is the count of available recorders.  Should the number of recorders we
 set up be too low, the system gets very busy, or there's some other hardware or
@@ -41,9 +41,9 @@ Some other metrics of less value but still nice to know:
   is just barley in range the controller may get a number of errors and garbled
   audio.  It will broadcast that back out (because something is better than
   nothing), but it doesn't mean there's any issues with our system's receiver.
-* **Call rate** - This is nice to see, but too verbose on larger systems to be
-  of use.  I collect and graph it on the dashboard in Zabbix, but there's less
-  value.
+* **Call rate** - This is nice to see, but it's too verbose on larger systems to
+  be of use.  I collect and graph it on the dashboard in Zabbix, but there's
+  less value.
 * **Encrypted Calls** - Transmissions that are marked as encrypted are worth
   keeping track of, but there's nothing we can do to listen to these.
   Encryption is becoming more common, so a sudden spike here might mean a
@@ -52,15 +52,44 @@ Some other metrics of less value but still nice to know:
   talkgroup in the CSV file given to trunk recorder.  If you see a lot of these,
   you might have new talk groups to identify.
 
-## How I Keep Track
+## Zabbix Templates
 
 The rest of my monitoring is in Zabbix, so I'm using it here.  We make use of a
 few discovery rules for most of the Trunk Recorder things, as data can by
 dynamic if you add more SDRs or P25 systems.  I've added the values to a
 template that you can import and attach to the node.
 
-(template file link)
+[Template File](/downloads/tr-zabbix.yaml)
 
-## Metrics
+To use the template, just apply it to your Trunk Recorder node that is running a
+Zabbix agent.  Some checks will use HTTP checks, but the same IP address will be
+used for both the Zabbix agent and any HTTP requests.
 
-Once you import the template, there are a number of metrics that
+### How This Template Works
+
+This template is using the Prometheus format metrics that are coming from the
+Trunk Recorder program, as well as a few other files we add metrics data to in
+the Liquid Soap streams.
+
+Prometheus exports data via a simple HTTP request that returns a formatted list
+of data, and Zabbix can parse the rows out to give us more detailed metrics. For
+Trunk Recorder, these are at http://ip-of-your-system:9842/metrics.  Trunk
+Recorder gives fairly verbose information here, snd breaks down a lot of metrics
+by frequency, SDR, or talkgroup where it makes sense.
+
+We use LLD rules to get the list of things like frequencies, talkgroups, etc and
+build metrics off of that.  This should allow us to add new recorders, or
+changes in the system such as new frequencies or talkgroups to be handled by our
+monitoring without us needing to intervene.
+
+## Dashboards
+
+There isn't a way (at least that I know of) to export, but creating dashboards
+is easy enough in Zabbix.  Here are the dashboard screens I've created for my
+system:
+
+![Dashboard](/images/2025.01-TRZabbix-1.png)
+
+![Dashboard](/images/2025.01-TRZabbix-2.png)
+
+![Dashboard](/images/2025.01-TRZabbix-3.png)
