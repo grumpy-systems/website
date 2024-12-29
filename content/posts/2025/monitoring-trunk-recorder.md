@@ -3,7 +3,6 @@ title: "Monitoring Trunk Recorder with Zabbix"
 date: 2025-01-24
 tags: ["how-to", "radios"]
 type: post
-draft: true
 ---
 
 [Last
