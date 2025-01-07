@@ -30,14 +30,14 @@ When looking at power stations vs Lithium UPS units (or even larger lead acid
 units), these power stations looked really appealing.  When making my
 comparisons to traditional UPS systems, these are the points I considered.
 
-* **Cost** - Both in upfront cost and maintenance.  Lead acid units will a new
-  set of batteries every few years, so buying a large unit used for cheap would
-  still require several hundred dollars of batteries.  New UPS units were
+* **Cost** - Both in upfront cost and maintenance.  Lead acid units will need a
+  new set of batteries every few years, so buying a large unit used for cheap
+  would still require several hundred dollars of batteries.  New UPS units were
   several thousand dollars at a minimum, so even more expensive.
 * **Utility** - These power stations accept solar panel input and are moderately
-  portable (smaller ones more portable), so I could take the unit out of the
-  rack and use it on a trip or elsewhere.  In a longer outage, some solar panels
-  would be enough to keep things like my fridge going for much longer.
+  portable (smaller ones more so), so I could take the unit out of the rack and
+  use it on a trip or elsewhere.  In a longer outage, some solar panels would be
+  enough to keep things like my fridge going for much longer.
 * **Safety** - A lot of folks have hacked together battery strings for UPS units
   that exceed the design capacity of the UPS.  Some units can handle this, but
   others aren't designed to run the inverter at high load for hours at at time.
@@ -63,11 +63,11 @@ though:
   safe.
 * **Passthrough Charging or a UPS Mode** - Different brands call this different
   things, but this allows the station to output power as it's charging.  When AC
-  Power is present, that's passed to the output and the battery is only switched
+  Power is present, it's passed to the output and the battery is only switched
   on when no AC input is present.  Some units have slow chargers that don't
   allow this, so be sure to check.
 
-The rest, like app control, are all immaterial.
+Other features, like app control, are all immaterial.
 
 ## Wait, But What About Clean Shutdowns?
 
@@ -76,7 +76,7 @@ shutdown?"
 
 The answer is the lead acid UPS we'll run inline after the power station.  I
 plug my lead acid UPS into the output of the power station which seems silly,
-but let has benefits.
+but has benefits.
 
 First, you're free to take your power station elsewhere and not lose the only
 UPS.  I use mine on trips at times or once the power is out and my generator
@@ -85,9 +85,9 @@ generator can't reach.
 
 Second, this solves all the problems with communication.  In an outage, the
 power station will transfer to it's internal battery and power the other UPS and
-the load.  In my case, once the power station is dead the lead battery will take
-over for about 20-30 minutes.  In that time, I get the normal UPS health alerts
-and eventual graceful shutdowns like I did before.
+the load. Once the power station is dead the lead battery will take over and
+report a normal grid outage to whatever software you use.  Once those batteries
+are low, you can trigger a normal shutdown as you did before.
 
 If your power station outputs a pure sine wave, the lead UPS will only trip for
 a second while the power transfers from the grid to the power station's battery
