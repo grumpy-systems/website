@@ -20,7 +20,7 @@ aging batteries, but also the increased load.
 
 I sought out to fix this, and landed in the category of Lithium power stations.
 These are self contained units that contain a Lithium battery and an AC
-inverter, and are intended for things like camping, RV's or event backup power
+inverter, and are intended for things like camping, RV's or even backup power
 like we're using here.  Jackery, Bluetti and Ecoflow are major brands in the
 space, if you can't picture what I'm talking about.
 
