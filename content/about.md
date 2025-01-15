@@ -21,13 +21,6 @@ I create content that's intended to be platform neutral.  I understand that
 these platforms aren't the most stable of things, and archiving things I do on a
 neutral format seems like the best way to ensure I can platform hop as needed.
 
-All code is released under some open source license.  It should be distributed
-with the project.  Videos, text on this site, etc is released under [Creative
-Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-If you're interested in commercial distribution of my non-source code material,
-reach out.
-
 ## Contacting Me
 
 The best way is to use one of the social media links on my homepage.
@@ -39,4 +32,5 @@ All the content on this site is licensed under
 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 Some code samples may have different licenses attached to them.  If no other
-license is specified, the above license applies.
+license is specified, the above license applies.  If you're interested in
+commercial distribution of my non-source code material, reach out.
