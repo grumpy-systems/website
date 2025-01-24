@@ -84,7 +84,7 @@ running.  I'll free it from the rack and use it elsewhere in the house where my
 generator can't reach.
 
 Second, this solves all the problems with communication.  In an outage, the
-power station will transfer to it's internal battery and power the other UPS and
+power station will transfer to its internal battery and power the other UPS and
 the load. Once the power station is dead the lead battery will take over and
 report a normal grid outage to whatever software you use.  Once those batteries
 are low, you can trigger a normal shutdown as you did before.
