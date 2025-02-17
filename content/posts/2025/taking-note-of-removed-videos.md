@@ -474,10 +474,10 @@ Videos that I do not have a copy or metadata for:
 
 16 videos removed of 6541
 
-* [The Wig Party: Virtual Screenings from Local Queer Filmmakers](https://archive.org/details/yt_8D5lPVrjdQU)
-* [Parade | Aug. 19–Sep. 7, 2025](https://archive.org/details/yt_J8zkKTeGpv0)
-* [Announcing the 2024–2025 Washington National Opera Season | In-Depth Look](https://archive.org/details/yt_MJpNv7qf4x8)
-* [The Wig Party: Pussy Noir - Millennium Stage (August 27, 2022)](https://archive.org/details/yt_yNdUdk-kdMU)
+* The Wig Party: Virtual Screenings from Local Queer Filmmakers
+* Parade | Aug. 19–Sep. 7, 2025
+* Announcing the 2024–2025 Washington National Opera Season | In-Depth Look
+* The Wig Party: Pussy Noir - Millennium Stage (August 27, 2022)
 
 Videos that I do not have a copy or metadata for:
 * 07hb1Egy9iA
