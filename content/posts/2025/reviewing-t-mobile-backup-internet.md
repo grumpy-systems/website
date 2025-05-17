@@ -23,9 +23,9 @@ I had a previous solution based on
 [4G](/2022/setting-up-a-backup-4g-internet-connection-with-opnsense/) and this
 solution worked really well for a number of outages.  I'm upgrading not because
 it's not working, but because it's almost perfect.  A bit more speed with 5G
-would things even more smooth, and given the low cost of entry I gave it a shot.
-If you're following along at home, the setup is identical but instead of using
-the 4G GL.Inet modem, I use the provided T-Mobile modem.
+would make things even more smooth, and given the low cost of entry I gave it a
+shot. If you're following along at home, the setup is identical but instead of
+using the 4G GL.Inet modem, I use the provided T-Mobile modem.
 
 ## The Good: Service
 
