@@ -21,7 +21,7 @@ steps:
 - name: deploy
   image: drillster/drone-rsync
   settings:
-    hosts: [10.0.254.20]
+    hosts: [10.0.254.50]
     user: grumpy
     key:
       from_secret: deploy_key
