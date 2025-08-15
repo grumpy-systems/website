@@ -14,7 +14,7 @@ steps:
   - git submodule update --recursive
 
 - name: hugo
-  image: registry.gatewayks.net/hugo/hugo
+  image: akester/hugo
   commands:
   - hugo build
 
